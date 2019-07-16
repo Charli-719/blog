@@ -8,6 +8,7 @@ db.json
 .deploy_git/
 .idea/
 node_modules/
+public/
 source/
 themes/
 scaffolds/
