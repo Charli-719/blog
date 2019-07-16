@@ -3,6 +3,7 @@ Thumbs.db
 lifuzhen
 lifuzhen.pub
 _config.yml
+*.json
 db.json
 *.log
 .deploy_git/
