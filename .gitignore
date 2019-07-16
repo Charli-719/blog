@@ -1,7 +1,16 @@
 .DS_Store
 Thumbs.db
 db.json
+lifuzhen
+lifuzhen.pub
+package.json
+package-lock.json
+_config.yml
+.gitignore
 *.log
 node_modules/
 public/
+source/
+themes/
+scaffolds/
 .deploy*/
