@@ -6,3 +6,5 @@
 
 [2019-08-06   2019月度总结-七月](https://lifuzhen.github.io/2019/08/06/2019%E6%9C%88%E5%BA%A6%E6%80%BB%E7%BB%93-%E4%B8%83%E6%9C%88/)
 
+[2019-08-08   :first-child与:first-of-type的区别](https://lifuzhen.github.io/2019/08/08/css%E9%80%89%E6%8B%A9%E5%99%A8%E4%B8%AD-first-child%E4%B8%8E-first-of-type%E7%9A%84%E5%8C%BA%E5%88%AB/)
+
