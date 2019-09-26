@@ -17,3 +17,4 @@
 [2019-09-22    关于this.setState({})中的数据延迟问题](https://lifuzhen.github.io/2019/09/22/%E5%85%B3%E4%BA%8Ethis-setState-%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BB%B6%E8%BF%9F%E9%97%AE%E9%A2%98/#more)
 
 [2019-09-25    微信扫码登录自定义样式](https://lifuzhen.github.io/2019/09/24/%E5%BE%AE%E4%BF%A1%E6%89%AB%E7%A0%81%E7%99%BB%E5%BD%95%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A0%B7%E5%BC%8F/)
+[2019-09-26    react-canvas-nest](https://lifuzhen.github.io/2019/09/26/react-canvas-nest/)
