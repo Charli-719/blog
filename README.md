@@ -19,3 +19,4 @@
 [2019-09-25    微信扫码登录自定义样式](https://lifuzhen.github.io/2019/09/24/%E5%BE%AE%E4%BF%A1%E6%89%AB%E7%A0%81%E7%99%BB%E5%BD%95%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A0%B7%E5%BC%8F/)
 [2019-09-26    react-canvas-nest](https://lifuzhen.github.io/2019/09/26/react-canvas-nest/)
 [2019-09-27    判断是页面是在手机端还是PC端打开](https://lifuzhen.github.io/2019/09/27/%E5%88%A4%E6%96%AD%E6%98%AF%E9%A1%B5%E9%9D%A2%E6%98%AF%E5%9C%A8%E6%89%8B%E6%9C%BA%E7%AB%AF%E8%BF%98%E6%98%AFPC%E7%AB%AF%E6%89%93%E5%BC%80/)
+[2019-10-05    2019月度总结-九月](https://lifuzhen.github.io/2019/10/05/2019%E6%9C%88%E5%BA%A6%E6%80%BB%E7%BB%93-%E4%B9%9D%E6%9C%88/)
