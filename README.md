@@ -20,3 +20,7 @@
 [2019-09-26    react-canvas-nest](https://lifuzhen.github.io/2019/09/26/react-canvas-nest/)
 [2019-09-27    判断是页面是在手机端还是PC端打开](https://lifuzhen.github.io/2019/09/27/%E5%88%A4%E6%96%AD%E6%98%AF%E9%A1%B5%E9%9D%A2%E6%98%AF%E5%9C%A8%E6%89%8B%E6%9C%BA%E7%AB%AF%E8%BF%98%E6%98%AFPC%E7%AB%AF%E6%89%93%E5%BC%80/)
 [2019-10-05    2019月度总结-九月](https://lifuzhen.github.io/2019/10/05/2019%E6%9C%88%E5%BA%A6%E6%80%BB%E7%BB%93-%E4%B9%9D%E6%9C%88/)
+
+[2019-11-26    position为fixed时设置z-index失效](https://lifuzhen.github.io/2019/10/05/2019%E6%9C%88%E5%BA%A6%E6%80%BB%E7%BB%93-%E4%B9%9D%E6%9C%88/)
+
+[2019-12-11    在IOS中DeviceMotionEvent失效](https://lifuzhen.github.io/2019/12/11/%E5%9C%A8IOS%E4%B8%ADDeviceMotionEvent%E5%A4%B1%E6%95%88/)
