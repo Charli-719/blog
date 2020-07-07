@@ -17,10 +17,19 @@
 [2019-09-22    关于this.setState({})中的数据延迟问题](https://lifuzhen.github.io/2019/09/22/%E5%85%B3%E4%BA%8Ethis-setState-%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BB%B6%E8%BF%9F%E9%97%AE%E9%A2%98/#more)
 
 [2019-09-25    微信扫码登录自定义样式](https://lifuzhen.github.io/2019/09/24/%E5%BE%AE%E4%BF%A1%E6%89%AB%E7%A0%81%E7%99%BB%E5%BD%95%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A0%B7%E5%BC%8F/)
+
 [2019-09-26    react-canvas-nest](https://lifuzhen.github.io/2019/09/26/react-canvas-nest/)
+
 [2019-09-27    判断是页面是在手机端还是PC端打开](https://lifuzhen.github.io/2019/09/27/%E5%88%A4%E6%96%AD%E6%98%AF%E9%A1%B5%E9%9D%A2%E6%98%AF%E5%9C%A8%E6%89%8B%E6%9C%BA%E7%AB%AF%E8%BF%98%E6%98%AFPC%E7%AB%AF%E6%89%93%E5%BC%80/)
+
 [2019-10-05    2019月度总结-九月](https://lifuzhen.github.io/2019/10/05/2019%E6%9C%88%E5%BA%A6%E6%80%BB%E7%BB%93-%E4%B9%9D%E6%9C%88/)
 
 [2019-11-26    position为fixed时设置z-index失效](https://lifuzhen.github.io/2019/10/05/2019%E6%9C%88%E5%BA%A6%E6%80%BB%E7%BB%93-%E4%B9%9D%E6%9C%88/)
 
 [2019-12-11    在IOS中DeviceMotionEvent失效](https://lifuzhen.github.io/2019/12/11/%E5%9C%A8IOS%E4%B8%ADDeviceMotionEvent%E5%A4%B1%E6%95%88/)
+
+[2020-01-09    background-attchment移动端无效](https://lifuzhen.github.io/2020/01/09/background-attchment%E7%A7%BB%E5%8A%A8%E7%AB%AF%E6%97%A0%E6%95%88/)
+
+[2020-01-14    css实现小企鹅](https://lifuzhen.github.io/2020/01/14/css%E5%AE%9E%E7%8E%B0%E5%B0%8F%E4%BC%81%E9%B9%85/)
+
+[2020-07-07    es6中的扩展运算符](https://lifuzhen.github.io/2020/07/06/es6%E4%B8%AD%E7%9A%84%E6%89%A9%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6/)
