@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.4.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=6.4.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=6.4.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.4.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="react-json-view(rjv)最近项目上引入了一个json解析的插件，我就把这个插件应用到了原来只有技术看的代码块上，现在在去看那个代码块，感觉清晰好多~很棒的一个插件，简单介绍下这个插件npm地址 install npm install react-json-view package.json“dependencies”: {    “react-json-view”: “latest">
+<meta name="keywords" content="插件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="react-json-view">
+<meta property="og:url" content="https://Charili.github.io/2020/11/27/react-json-view/index.html">
+<meta property="og:site_name" content="Charli">
+<meta property="og:description" content="react-json-view(rjv)最近项目上引入了一个json解析的插件，我就把这个插件应用到了原来只有技术看的代码块上，现在在去看那个代码块，感觉清晰好多~很棒的一个插件，简单介绍下这个插件npm地址 install npm install react-json-view package.json“dependencies”: {    “react-json-view”: “latest">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://charili.github.io/2020/11/27/react-json-view/result01.jpg">
+<meta property="og:image" content="https://charili.github.io/2020/11/27/react-json-view/name.jpg">
+<meta property="og:image" content="https://charili.github.io/2020/11/27/react-json-view/theme.jpg">
+<meta property="og:image" content="https://charili.github.io/2020/11/27/react-json-view/iconStyle.jpg">
+<meta property="og:image" content="https://charili.github.io/2020/11/27/react-json-view/indentWidth.jpg">
+<meta property="og:image" content="https://charili.github.io/2020/11/27/react-json-view/collapsed.jpg">
+<meta property="og:image" content="https://charili.github.io/2020/11/27/react-json-view/groupArrayAfterLength.jpg">
+<meta property="og:image" content="https://charili.github.io/2020/11/27/react-json-view/enableClipboard.jpg">
+<meta property="og:image" content="https://charili.github.io/2020/11/27/react-json-view/displayObjectSize.jpg">
+<meta property="og:image" content="https://charili.github.io/2020/11/27/react-json-view/displayDataTypes.jpg">
+<meta property="og:image" content="https://charili.github.io/2020/11/27/react-json-view/onEdit.jpg">
+<meta property="og:image" content="https://charili.github.io/2020/11/27/react-json-view/onAdd.jpg">
+<meta property="og:image" content="https://charili.github.io/2020/11/27/react-json-view/onDelete.jpg">
+<meta property="og:image" content="https://charili.github.io/2020/11/27/react-json-view/sortKeys.jpg">
+<meta property="og:updated_time" content="2022-05-24T10:35:59.928Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="react-json-view">
+<meta name="twitter:description" content="react-json-view(rjv)最近项目上引入了一个json解析的插件，我就把这个插件应用到了原来只有技术看的代码块上，现在在去看那个代码块，感觉清晰好多~很棒的一个插件，简单介绍下这个插件npm地址 install npm install react-json-view package.json“dependencies”: {    “react-json-view”: “latest">
+<meta name="twitter:image" content="https://charili.github.io/2020/11/27/react-json-view/result01.jpg">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Charli" type="application/atom+xml" />
+
+
+
+
+  <link rel="canonical" href="https://Charili.github.io/2020/11/27/react-json-view/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>react-json-view | Charli</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Charli</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">梦想的起源</p>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://Charili.github.io/2020/11/27/react-json-view/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Charli">
+      <meta itemprop="description" content="不积跬步，无以至千里">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Charli">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">react-json-view
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-11-27 11:45:06" itemprop="dateCreated datePublished" datetime="2020-11-27T11:45:06+08:00">2020-11-27</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2022-05-24 18:35:59" itemprop="dateModified" datetime="2022-05-24T18:35:59+08:00">2022-05-24</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/11/27/react-json-view/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2020/11/27/react-json-view/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2020/11/27/react-json-view/" class="leancloud_visitors" data-flag-title="react-json-view">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="react-json-view-rjv"><a href="#react-json-view-rjv" class="headerlink" title="react-json-view(rjv)"></a>react-json-view(rjv)</h2><p>最近项目上引入了一个json解析的插件，我就把这个插件应用到了原来只有技术看的代码块上，现在在去看那个代码块，感觉清晰好多~<br>很棒的一个插件，简单介绍下这个插件<br><a href="https://www.npmjs.com/package/react-json-view" target="_blank" rel="noopener">npm地址</a></p>
+<h2 id="install"><a href="#install" class="headerlink" title="install"></a>install</h2><p> npm install react-json-view</p>
+<h2 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h2><p>“dependencies”: {<br>    “react-json-view”: “latest”<br>}</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">import React from &quot;react&quot;;</span><br><span class="line">import ReactJson from &quot;react-json-view&quot;;</span><br><span class="line"></span><br><span class="line">class ReactJsonView extends React.Component&#123;</span><br><span class="line">    state = &#123;</span><br><span class="line">        my_json_object: &#123;</span><br><span class="line">            &quot;string&quot;: &quot;this is a test string&quot;,</span><br><span class="line">            &quot;integer&quot;: 42,</span><br><span class="line">            &quot;array&quot;: [1,2,3,&quot;test&quot;,null],</span><br><span class="line">            &quot;float&quot;: 3.14159,</span><br><span class="line">            &quot;object&quot;: &#123;&quot;first-child&quot;: true,&quot;second-child&quot;: false,&quot;last-child&quot;: null&#125;,</span><br><span class="line">            &quot;string_number&quot;: &quot;1234&quot;,</span><br><span class="line">            &quot;date&quot;: &quot;2020-12-01T04:02:13.464Z&quot;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    render() &#123;</span><br><span class="line">        return &lt;div&gt;</span><br><span class="line">            &lt;ReactJson src=&#123;this.state.my_json_object&#125; /&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default ReactJsonView;</span><br></pre></td></tr></table></figure>
+<p>代码运行结果：<br><img src="/2020/11/27/react-json-view/result01.jpg" alt=""></p>
+<h2 id="属性简介"><a href="#属性简介" class="headerlink" title="属性简介"></a>属性简介</h2><h3 id="src"><a href="#src" class="headerlink" title="src"></a>src</h3><pre><code>类型： json对象
+默认值： 没有
+描述：这里的值显示的是json数据
+</code></pre><h3 id="name"><a href="#name" class="headerlink" title="name"></a>name</h3><pre><code>类型：string或这个是false
+默认值： &quot;root&quot;
+描述： 这里是根节点的名字，如果取值为null或者false则没有名字
+</code></pre><h4 id="name取值对比图"><a href="#name取值对比图" class="headerlink" title="name取值对比图"></a>name取值对比图</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;ReactJson</span><br><span class="line">    src=&#123;this.state.my_json_object&#125;</span><br><span class="line">    name=&#123;false&#125;</span><br><span class="line">/&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="/2020/11/27/react-json-view/name.jpg" alt=""></p>
+<h3 id="theme"><a href="#theme" class="headerlink" title="theme"></a>theme</h3><pre><code>类型：string
+默认值：rjv-default
+描述：rjv支持base-16主题。包括（apathy，apathy:inverted，ashes，bespin，brewer，bright:inverted，bright，chalk，codeschool，colors，eighties，embers，flat，google，grayscale，grayscale:inverted，greenscreen，harmonic，hopscotch，isotope，marrakesh，mocha，monokai，ocean，paraiso，pop，railscasts，rjv-default，shapeshifter，shapeshifter:inverted，solarized，summerfruit，summerfruit:inverted，threezerotwofour，tomorrow，tube，twilight）
+</code></pre><h4 id="theme取值对比图"><a href="#theme取值对比图" class="headerlink" title="theme取值对比图"></a>theme取值对比图</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;ReactJson</span><br><span class="line">   src=&#123;this.state.my_json_object&#125;</span><br><span class="line">   name=&#123;false&#125;</span><br><span class="line">   theme=&quot;shapeshifter&quot;</span><br><span class="line">/&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="/2020/11/27/react-json-view/theme.jpg" alt=""></p>
+<h3 id="style"><a href="#style" class="headerlink" title="style"></a>style</h3><pre><code>类型：object
+默认值：{}
+描述：可以通过style添加、修改样式，可覆盖主题默认提供的属性
+</code></pre><h3 id="iconStyle"><a href="#iconStyle" class="headerlink" title="iconStyle"></a>iconStyle</h3><pre><code>类型：string
+默认值：&quot;circle&quot;
+描述：接受参数:circle(圆)、triangle(三角形)、square(圆)
+</code></pre><p><img src="/2020/11/27/react-json-view/iconStyle.jpg" alt=""></p>
+<h3 id="indentWidth"><a href="#indentWidth" class="headerlink" title="indentWidth"></a>indentWidth</h3><pre><code>类型：integer
+默认值：4
+描述：JSON嵌套对象的缩进值
+</code></pre><p><img src="/2020/11/27/react-json-view/indentWidth.jpg" alt=""></p>
+<h3 id="collapsed"><a href="#collapsed" class="headerlink" title="collapsed"></a>collapsed</h3><pre><code>类型：boolean 或者 integer
+默认值：false
+描述：当设置为true，默认情况下，所有节点都将被折叠。使用整数值在特定深度折叠。
+</code></pre><p><img src="/2020/11/27/react-json-view/collapsed.jpg" alt=""></p>
+<h3 id="collapseStringsAfterLength"><a href="#collapseStringsAfterLength" class="headerlink" title="collapseStringsAfterLength"></a>collapseStringsAfterLength</h3><pre><code>类型：integer
+默认值：false
+描述：这个就是超出内容会变成…的功能。当一个整数值被赋值时，字符串就会在这个长度后面接上省略号。可以通过单击字符串值来展开和折叠字符串内容
+</code></pre><h3 id="shouldCollapse"><a href="#shouldCollapse" class="headerlink" title="shouldCollapse"></a>shouldCollapse</h3><pre><code>类型：(field)=&gt;{}
+默认值：false
+描述：回调函数来提供对默认情况下应该折叠的对象和数组的控制。对象被传递给包含name, src, type(“数组”或“对象”)和namespace
+</code></pre><h3 id="groupArraysAfterLength"><a href="#groupArraysAfterLength" class="headerlink" title="groupArraysAfterLength"></a>groupArraysAfterLength</h3><pre><code>类型：integet
+默认值：100
+描述：当指定整数值时，数组将按值的计数分组显示。组以brakset符号显示，可以通过符号展开和折叠。
+</code></pre><p><img src="/2020/11/27/react-json-view/groupArrayAfterLength.jpg" alt=""></p>
+<h3 id="enableClipboard"><a href="#enableClipboard" class="headerlink" title="enableClipboard"></a>enableClipboard</h3><pre><code>类型：boolean 或者 (copy)=&gt;{}
+默认值：true
+描述：当prop不为false时，用户可以通过单击剪贴板图标将对象和数组复制到剪贴板。支持复制回调。
+</code></pre><p><img src="/2020/11/27/react-json-view/enableClipboard.jpg" alt=""></p>
+<h3 id="displayObjectSize"><a href="#displayObjectSize" class="headerlink" title="displayObjectSize"></a>displayObjectSize</h3><pre><code>类型：boolean
+默认值：true
+描述：当设置为true时，对象和数组将显示size
+</code></pre><p><img src="/2020/11/27/react-json-view/displayObjectSize.jpg" alt=""></p>
+<h3 id="displayDataTypes"><a href="#displayDataTypes" class="headerlink" title="displayDataTypes"></a>displayDataTypes</h3><pre><code>类型：boolean
+默认值：true
+描述：当设置为true，value前面显示数据类型
+</code></pre><p><img src="/2020/11/27/react-json-view/displayDataTypes.jpg" alt=""></p>
+<h3 id="onEdit"><a href="#onEdit" class="headerlink" title="onEdit"></a>onEdit</h3><pre><code>类型：(edit)=&gt;{}
+默认值：false
+描述：当传入回调函数时，edit功能已启用。在编辑完成之后调用回调。
+</code></pre><p><img src="/2020/11/27/react-json-view/onEdit.jpg" alt=""></p>
+<h3 id="onAdd"><a href="#onAdd" class="headerlink" title="onAdd"></a>onAdd</h3><pre><code>类型：(add)=&gt;{}
+默认值：false
+描述：当传入回调函数时，add功能已启用。在完成添加之后调用回调。
+</code></pre><p><img src="/2020/11/27/react-json-view/onAdd.jpg" alt=""></p>
+<h3 id="defaultValue"><a href="#defaultValue" class="headerlink" title="defaultValue"></a>defaultValue</h3><pre><code>类型：string||number||boolean||array||object
+默认值：null
+描述：设置添加到json时的默认值
+</code></pre><h3 id="onDelete"><a href="#onDelete" class="headerlink" title="onDelete"></a>onDelete</h3><pre><code>类型：(delete)=&gt;{}
+默认值：false
+描述：当传入回调函数时，delete功能已启用。在完成删除之后调用回调。
+</code></pre><p><img src="/2020/11/27/react-json-view/onDelete.jpg" alt=""></p>
+<h3 id="onSelect"><a href="#onSelect" class="headerlink" title="onSelect"></a>onSelect</h3><pre><code>类型：(select)=&gt;{}
+默认值：false
+描述：当传入函数时，单击值将触发onSelect方法将被调用。
+</code></pre><h3 id="sortKeys"><a href="#sortKeys" class="headerlink" title="sortKeys"></a>sortKeys</h3><pre><code>类型：boolean
+默认值：false
+描述：当设置为true，根据对象的key排序
+</code></pre><p><img src="/2020/11/27/react-json-view/sortKeys.jpg" alt=""></p>
+<h3 id="validationMessage"><a href="#validationMessage" class="headerlink" title="validationMessage"></a>validationMessage</h3><pre><code>类型：string
+默认值：“Validation Error”
+描述：针对OneEdit、onAdd或onDelete回调的验证失败的自定义消息
+</code></pre><p><a href="https://mac-s-g.github.io/react-json-view/demo/dist/" target="_blank" rel="noopener">Check out the list of supported themes in the component demo</a></p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/插件/" rel="tag"># 插件</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/11/12/ios手机不兼容摇一摇功能/" rel="next" title="ios手机不兼容摇一摇功能">
+                <i class="fa fa-chevron-left"></i> ios手机不兼容摇一摇功能
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2021/01/18/微信公众号h5跳转小程序/" rel="prev" title="微信公众号h5跳转小程序">
+                微信公众号h5跳转小程序 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="Charli" />
+            
+              <p class="site-author-name" itemprop="name">Charli</p>
+              <p class="site-description motion-element" itemprop="description">不积跬步，无以至千里</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">39</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">22</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/Lifuzhen" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://weibo.com/fuzhen66" target="_blank" title="微博"><i class="fa fa-fw fa-weibo"></i>微博</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#react-json-view-rjv"><span class="nav-number">1.</span> <span class="nav-text">react-json-view(rjv)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#install"><span class="nav-number">2.</span> <span class="nav-text">install</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#package-json"><span class="nav-number">3.</span> <span class="nav-text">package.json</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用"><span class="nav-number">4.</span> <span class="nav-text">使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#属性简介"><span class="nav-number">5.</span> <span class="nav-text">属性简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#src"><span class="nav-number">5.1.</span> <span class="nav-text">src</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#name"><span class="nav-number">5.2.</span> <span class="nav-text">name</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#name取值对比图"><span class="nav-number">5.2.1.</span> <span class="nav-text">name取值对比图</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#theme"><span class="nav-number">5.3.</span> <span class="nav-text">theme</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#theme取值对比图"><span class="nav-number">5.3.1.</span> <span class="nav-text">theme取值对比图</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#style"><span class="nav-number">5.4.</span> <span class="nav-text">style</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#iconStyle"><span class="nav-number">5.5.</span> <span class="nav-text">iconStyle</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#indentWidth"><span class="nav-number">5.6.</span> <span class="nav-text">indentWidth</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#collapsed"><span class="nav-number">5.7.</span> <span class="nav-text">collapsed</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#collapseStringsAfterLength"><span class="nav-number">5.8.</span> <span class="nav-text">collapseStringsAfterLength</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#shouldCollapse"><span class="nav-number">5.9.</span> <span class="nav-text">shouldCollapse</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#groupArraysAfterLength"><span class="nav-number">5.10.</span> <span class="nav-text">groupArraysAfterLength</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#enableClipboard"><span class="nav-number">5.11.</span> <span class="nav-text">enableClipboard</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#displayObjectSize"><span class="nav-number">5.12.</span> <span class="nav-text">displayObjectSize</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#displayDataTypes"><span class="nav-number">5.13.</span> <span class="nav-text">displayDataTypes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#onEdit"><span class="nav-number">5.14.</span> <span class="nav-text">onEdit</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#onAdd"><span class="nav-number">5.15.</span> <span class="nav-text">onAdd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#defaultValue"><span class="nav-number">5.16.</span> <span class="nav-text">defaultValue</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#onDelete"><span class="nav-number">5.17.</span> <span class="nav-text">onDelete</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#onSelect"><span class="nav-number">5.18.</span> <span class="nav-text">onSelect</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sortKeys"><span class="nav-number">5.19.</span> <span class="nav-text">sortKeys</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#validationMessage"><span class="nav-number">5.20.</span> <span class="nav-text">validationMessage</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Charli</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Pisces</a> v6.4.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.4.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'bQj0duOu4duPTzRWh3nmNqNG-gzGzoHsz',
+        appKey: '8RVBaAkuHUkExbSP4g6iSYcf',
+        placeholder: '聊五毛钱的天呗',
+        avatar:'mm',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: false
+    });
+  </script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script>
+    
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
+        .done(function ({ results }) {
+          if (results.length > 0) {
+            var counter = results[0];
+            
+            Counter('put', `/classes/Counter/${counter.objectId}`, JSON.stringify({ time: { "__op":"Increment", "amount":1 } }))
+            
+            .done(function () {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(counter.time + 1);
+            })
+            
+            .fail(function ({ responseJSON }) {
+                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
+            })
+          } else {
+            
+              var $element = $(document.getElementById(url));
+              $element.find('.leancloud-visitors-count').text('Counter not initialized! See more at console err msg.');
+              console.error('ATTENTION! LeanCloud counter has security bug, see here how to solve it: https://github.com/theme-next/hexo-leancloud-counter-security. \n But you also can use LeanCloud without security, by set \'security\' option to \'false\'.');
+            
+          }
+        })
+      .fail(function ({ responseJSON }) {
+        console.log('LeanCloud Counter Error:' + responseJSON.code + " " + responseJSON.error);
+      });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + "bQj0duOu4duPTzRWh3nmNqNG-gzGzoHsz")
+        .done(function ({ api_server }) {
+          var Counter = function (method, url, data) {
+            return $.ajax({
+              method: method,
+              url: `https://${api_server}/1.1${url}`,
+              headers: {
+                'X-LC-Id': "bQj0duOu4duPTzRWh3nmNqNG-gzGzoHsz",
+                'X-LC-Key': "8RVBaAkuHUkExbSP4g6iSYcf",
+                'Content-Type': 'application/json',
+              },
+              data: data,
+            });
+          };
+          
+          addCount(Counter);
+          
+        })
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("bQj0duOu4duPTzRWh3nmNqNG-gzGzoHsz", "8RVBaAkuHUkExbSP4g6iSYcf");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+</body>
+</html>
