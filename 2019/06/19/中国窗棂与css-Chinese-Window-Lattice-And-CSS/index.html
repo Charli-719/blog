@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.4.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=6.4.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=6.4.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.4.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="本文出处(Chinese Window Lattice And CSS)  谁向云端着此亭，檐前树木映窗棂。– 释绍嵩《陪赵知府登桃岭山亭》">
+<meta name="keywords" content="CSS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="中国窗棂与css(Chinese Window Lattice And CSS)">
+<meta property="og:url" content="https://lifuzhen.github.io/2019/06/19/中国窗棂与css-Chinese-Window-Lattice-And-CSS/index.html">
+<meta property="og:site_name" content="Charli">
+<meta property="og:description" content="本文出处(Chinese Window Lattice And CSS)  谁向云端着此亭，檐前树木映窗棂。– 释绍嵩《陪赵知府登桃岭山亭》">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://lifuzhen.github.io/2019/06/19/中国窗棂与css-Chinese-Window-Lattice-And-CSS/01.png">
+<meta property="og:image" content="https://lifuzhen.github.io/2019/06/19/中国窗棂与css-Chinese-Window-Lattice-And-CSS/02.png">
+<meta property="og:image" content="https://lifuzhen.github.io/2019/06/19/中国窗棂与css-Chinese-Window-Lattice-And-CSS/03.png">
+<meta property="og:image" content="https://lifuzhen.github.io/2019/06/19/中国窗棂与css-Chinese-Window-Lattice-And-CSS/04.png">
+<meta property="og:image" content="https://lifuzhen.github.io/2019/06/19/中国窗棂与css-Chinese-Window-Lattice-And-CSS/05.png">
+<meta property="og:image" content="https://lifuzhen.github.io/2019/06/19/中国窗棂与css-Chinese-Window-Lattice-And-CSS/06.png">
+<meta property="og:image" content="https://lifuzhen.github.io/2019/06/19/中国窗棂与css-Chinese-Window-Lattice-And-CSS/07.png">
+<meta property="og:image" content="https://lifuzhen.github.io/2019/06/19/中国窗棂与css-Chinese-Window-Lattice-And-CSS/08.png">
+<meta property="og:image" content="https://lifuzhen.github.io/2019/06/19/中国窗棂与css-Chinese-Window-Lattice-And-CSS/09.png">
+<meta property="og:image" content="https://lifuzhen.github.io/2019/06/19/中国窗棂与css-Chinese-Window-Lattice-And-CSS/10.png">
+<meta property="og:image" content="https://lifuzhen.github.io/2019/06/19/中国窗棂与css-Chinese-Window-Lattice-And-CSS/11.png">
+<meta property="og:image" content="https://lifuzhen.github.io/2019/06/19/中国窗棂与css-Chinese-Window-Lattice-And-CSS/12.png">
+<meta property="og:image" content="https://lifuzhen.github.io/2019/06/19/中国窗棂与css-Chinese-Window-Lattice-And-CSS/13.png">
+<meta property="og:updated_time" content="2022-05-24T10:36:00.921Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="中国窗棂与css(Chinese Window Lattice And CSS)">
+<meta name="twitter:description" content="本文出处(Chinese Window Lattice And CSS)  谁向云端着此亭，檐前树木映窗棂。– 释绍嵩《陪赵知府登桃岭山亭》">
+<meta name="twitter:image" content="https://lifuzhen.github.io/2019/06/19/中国窗棂与css-Chinese-Window-Lattice-And-CSS/01.png">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Charli" type="application/atom+xml" />
+
+
+
+
+  <link rel="canonical" href="https://lifuzhen.github.io/2019/06/19/中国窗棂与css-Chinese-Window-Lattice-And-CSS/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>中国窗棂与css(Chinese Window Lattice And CSS) | Charli</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Charli</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">梦想的起源</p>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://lifuzhen.github.io/2019/06/19/中国窗棂与css-Chinese-Window-Lattice-And-CSS/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Charli">
+      <meta itemprop="description" content="不积跬步，无以至千里">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Charli">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">中国窗棂与css(Chinese Window Lattice And CSS)
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-06-19 16:05:01" itemprop="dateCreated datePublished" datetime="2019-06-19T16:05:01+08:00">2019-06-19</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2022-05-24 18:36:00" itemprop="dateModified" datetime="2022-05-24T18:36:00+08:00">2022-05-24</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/06/19/中国窗棂与css-Chinese-Window-Lattice-And-CSS/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2019/06/19/中国窗棂与css-Chinese-Window-Lattice-And-CSS/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/06/19/中国窗棂与css-Chinese-Window-Lattice-And-CSS/" class="leancloud_visitors" data-flag-title="中国窗棂与css(Chinese Window Lattice And CSS)">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>本文出处<a href="https://yuanchuan.dev/2019/05/15/window-lattice-and-css.html" target="_blank" rel="noopener">(Chinese Window Lattice And CSS)</a></p>
+<blockquote>
+<p>谁向云端着此亭，檐前树木映窗棂。<br>– 释绍嵩《陪赵知府登桃岭山亭》</p>
+</blockquote>
+<p><img src="/2019/06/19/中国窗棂与css-Chinese-Window-Lattice-And-CSS/01.png" alt="01"></p>
+<a id="more"></a>
+<p>中国传统窗格具有对称美，还有一个非常美丽的正式名称——窗棂<br>作为一个css爱好者，我一直想用css绘制出它们。但这从来都不容易。我想使用SVG可能简单易懂知道我学习了如何使用 -webkit-box-reflect 属性。</p>
+<h1 id="属性-The-property"><a href="#属性-The-property" class="headerlink" title="属性(The property)"></a>属性(The property)</h1><p>不幸的是，-webkit-box-reflect 是非标准的。标准的方式是使用element()函数，该函数已经在firefox中实现。<br>老实说-webkit-box-reflect属性在我看来是非常简洁的，应为它有很好的命名和它不依赖于额外的id像element()。我不知道为什么css工作组不接受它。<br>这是一篇关于css中反射的详细文章，以及Ana Tudor从2016年开始的几个演示。</p>
+<h1 id="趋势-Directions"><a href="#趋势-Directions" class="headerlink" title="趋势(Directions)"></a>趋势(Directions)</h1><p>这个-webkit-box-reflect属性提供四个反射方向：上、下、左和右。如何使用它:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.bos&#123;</span><br><span class="line">    -webkit-box-reflect:above|below|left|right;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>也许因为从一开始它这是一个实验性的属性，所以还没有办法同时给一个元素增加多个反射。</p>
+<p><img src="/2019/06/19/中国窗棂与css-Chinese-Window-Lattice-And-CSS/02.png" alt=""></p>
+<p>我认为不同成俗的多次反射比只有4次反射的反射要酷的多！</p>
+<p>它令人兴奋<br>让我们开始使用一个单一的div元素和它在右边的反射。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;△&lt;/div&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">    div&#123;</span><br><span class="line">        -webkit-box-reflect:right;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure></p>
+<p><img src="/2019/06/19/中国窗棂与css-Chinese-Window-Lattice-And-CSS/03.png" alt=""></p>
+<h1 id="如何增加其他的反射？-How-to-add-another-reflection"><a href="#如何增加其他的反射？-How-to-add-another-reflection" class="headerlink" title="如何增加其他的反射？(How to add another reflection?)"></a>如何增加其他的反射？(How to add another reflection?)</h1><p>不久前，ChrisCoyier在本文中介绍了一个技巧，通过应用放置阴影于父节点，将阴影添加到剪裁元素中。<br>我们可以通过添加父节点并对其设置反射来做类似的事情。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;parent&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;box&quot;&gt;△&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">  .box &#123;</span><br><span class="line">    -webkit-box-reflect: right;</span><br><span class="line">  &#125;</span><br><span class="line">  .parent &#123;</span><br><span class="line">    -webkit-box-reflect: below;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure></p>
+<p><img src="/2019/06/19/中国窗棂与css-Chinese-Window-Lattice-And-CSS/04.png" alt=""></p>
+<p>它像一张展开的纸，首先分成两半从左到右，然后从上到下。但是，顺序并不重要。<br>尽管没有得到我们想要的精确的结果，找到一种添加多种反射的方式也令我们兴奋。</p>
+<h1 id="继续深入-Going-deep"><a href="#继续深入-Going-deep" class="headerlink" title="继续深入(Going deep)"></a>继续深入(Going deep)</h1><p>这个总数程指数形式增长，这取决于嵌套div的深度。<br>因此像上面有2个嵌套的div，它们将得到2^2=4个元素（包括所有的反射）。有7个它们将是2^7=128个元素。</p>
+<p><img src="/2019/06/19/中国窗棂与css-Chinese-Window-Lattice-And-CSS/05.png" alt=""></p>
+<h1 id="起源-Seed"><a href="#起源-Seed" class="headerlink" title="起源(Seed)"></a>起源(Seed)</h1><p>最深处的div作为起源。因为由反射组成的整个图形将随它而改变。<br>举个例子，旋转-45度：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;div class=&quot;seed&quot;&gt;△&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">  /* ... */</span><br><span class="line">  .seed &#123;</span><br><span class="line">    /* ... */</span><br><span class="line">    transform: rotate(-45deg);</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure></p>
+<p><img src="/2019/06/19/中国窗棂与css-Chinese-Window-Lattice-And-CSS/06.png" alt=""></p>
+<p>或结合一个其他属性及旧方法。这似乎也是另外一种构建Unicode模式不同的方法。</p>
+<p><img src="/2019/06/19/中国窗棂与css-Chinese-Window-Lattice-And-CSS/07.png" alt=""></p>
+<p><img src="/2019/06/19/中国窗棂与css-Chinese-Window-Lattice-And-CSS/08.png" alt=""></p>
+<h1 id="中国窗棂-Chinese-Window-Lattice"><a href="#中国窗棂-Chinese-Window-Lattice" class="headerlink" title="中国窗棂(Chinese Window Lattice)"></a>中国窗棂(Chinese Window Lattice)</h1><p>因此，使用-weblit-box-reflect属性和上述描述的技术，我们可以使用很少的代码在css中画出这些对称的窗棂。<br>我想以本文的开始图片为例，让我们看看如何一步一步的画出它们。</p>
+<h2 id="1、元素的起源-The-seed-element"><a href="#1、元素的起源-The-seed-element" class="headerlink" title="1、元素的起源(The seed element)"></a>1、元素的起源(The seed element)</h2><p>首先，找出最小的元素不能进行分割，这里我们从左上角的部分作为起点。</p>
+<p><img src="/2019/06/19/中国窗棂与css-Chinese-Window-Lattice-And-CSS/09.png" alt=""></p>
+<p>然后用 background linear-gradient 绘制这些线。为简单起见，使用空选择器作为种子元素。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">  div:empty &#123;</span><br><span class="line">    width: 72px; height: 72px;</span><br><span class="line">    --g: linear-gradient(#000, #000);</span><br><span class="line">    --gs: linear-gradient(-45deg,</span><br><span class="line">      transparent calc(50% - 1px), #000 calc(50% - 1px),</span><br><span class="line">      #000 calc(50% + 1px), transparent calc(50% + 1px)</span><br><span class="line">    );</span><br><span class="line">    background:</span><br><span class="line">      var(--g) 0 0 / 100% 2px,       var(--g) 100% 0 / 2px 48px,</span><br><span class="line">      var(--g) 100% 48px / 24px 2px, var(--g) 48px 100% / 2px 24px,</span><br><span class="line">      var(--g) 0 100% / 48px 2px,    var(--g) 0 0 / 2px 100%,</span><br><span class="line">      var(--g) 0 46px / 24px 2px,    var(--g) 24px 100% / 2px 26px,</span><br><span class="line">      var(--g) 100% 24px / 26px 2px, var(--g) 46px 0 / 2px 24px,</span><br><span class="line">      var(--gs) 50% 50% / 24px 24px, var(--gs) 0 0 / 40px 40px;</span><br><span class="line">    background-repeat: no-repeat;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure></p>
+<h2 id="2-添加反射-Add-reflection"><a href="#2-添加反射-Add-reflection" class="headerlink" title="2. 添加反射(Add reflection)"></a>2. 添加反射(Add reflection)</h2><p>反射从种子元素本身开始。我们选择“右边”作为初始方向，并使用自定义属性使其更直观。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;div style=&quot;--reflect: right -3px&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">  div &#123;</span><br><span class="line">     width: 72px;  height: 72px;</span><br><span class="line">    -webkit-box-reflect: var(--reflect);</span><br><span class="line">  &#125;</span><br><span class="line">  div:empty &#123;</span><br><span class="line">    /* ... */</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure></p>
+<p><img src="/2019/06/19/中国窗棂与css-Chinese-Window-Lattice-And-CSS/10.png" alt=""></p>
+<h2 id="3-继续展开-Continue-unfolding"><a href="#3-继续展开-Continue-unfolding" class="headerlink" title="3. 继续展开(Continue unfolding)"></a>3. 继续展开(Continue unfolding)</h2><p>所以我们要添加父节点来进行更多的反射。如果你把它看成是展开一张纸，那就真的有助于理解。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div style=&quot;--reflect: below -2px&quot;&gt;</span><br><span class="line">  &lt;div style=&quot;--reflect: right -3px&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<p><img src="/2019/06/19/中国窗棂与css-Chinese-Window-Lattice-And-CSS/11.png" alt=""></p>
+<h1 id="再加一个-Add-another-one"><a href="#再加一个-Add-another-one" class="headerlink" title="再加一个(Add another one.)"></a>再加一个(Add another one.)</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div style=&quot;--reflect: below calc(200% - 6px)&quot;&gt;</span><br><span class="line">  &lt;div style=&quot;--reflect: below -2px&quot;&gt;</span><br><span class="line">    &lt;div style=&quot;--reflect: right -3px&quot;&gt;&lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/06/19/中国窗棂与css-Chinese-Window-Lattice-And-CSS/12.png" alt=""></p>
+<p>重复这个过程直到我们得到想要的结果。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;div style=&quot;--reflect: right calc(600% - 14px)&quot;&gt;</span><br><span class="line">  &lt;div style=&quot;--reflect: right calc(200% - 6px)&quot;&gt;</span><br><span class="line">    &lt;div style=&quot;--reflect: below calc(400% - 10px)&quot;&gt;</span><br><span class="line">      &lt;div style=&quot;--reflect: below calc(200% - 6px)&quot;&gt;</span><br><span class="line">        &lt;div style=&quot;--reflect: below -2px&quot;&gt;</span><br><span class="line">          &lt;div style=&quot;--reflect: right -2px&quot;&gt;&lt;/div&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<p><img src="/2019/06/19/中国窗棂与css-Chinese-Window-Lattice-And-CSS/13.png" alt=""></p>
+<p>That’s it.<br>您可以在<a href="https://codepen.io/fuzhen/pen/RzGzEM" target="_blank" rel="noopener">CodePen</a>上看到结果和完整的源代码。但它只在Chrome和Safari中有效。</p>
+<h1 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h1><p>使用-webkit box reflect属性的解决方案在某种程度上很漂亮。我真希望它能被接受为一个标准，甚至能在各个方面做反射。这样就有可能在CSS中做剪纸（中国剪纸艺术）。</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CSS/" rel="tag"># CSS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/06/04/前端面试题深入解析-01/" rel="next" title="前端面试题深入解析-01">
+                <i class="fa fa-chevron-left"></i> 前端面试题深入解析-01
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/06/22/react实现抽奖大转盘/" rel="prev" title="react实现抽奖大转盘">
+                react实现抽奖大转盘 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="Charli" />
+            
+              <p class="site-author-name" itemprop="name">Charli</p>
+              <p class="site-description motion-element" itemprop="description">不积跬步，无以至千里</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">42</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">22</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/lifuzhen" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#属性-The-property"><span class="nav-number">1.</span> <span class="nav-text">属性(The property)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#趋势-Directions"><span class="nav-number">2.</span> <span class="nav-text">趋势(Directions)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何增加其他的反射？-How-to-add-another-reflection"><span class="nav-number">3.</span> <span class="nav-text">如何增加其他的反射？(How to add another reflection?)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#继续深入-Going-deep"><span class="nav-number">4.</span> <span class="nav-text">继续深入(Going deep)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#起源-Seed"><span class="nav-number">5.</span> <span class="nav-text">起源(Seed)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#中国窗棂-Chinese-Window-Lattice"><span class="nav-number">6.</span> <span class="nav-text">中国窗棂(Chinese Window Lattice)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、元素的起源-The-seed-element"><span class="nav-number">6.1.</span> <span class="nav-text">1、元素的起源(The seed element)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-添加反射-Add-reflection"><span class="nav-number">6.2.</span> <span class="nav-text">2. 添加反射(Add reflection)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-继续展开-Continue-unfolding"><span class="nav-number">6.3.</span> <span class="nav-text">3. 继续展开(Continue unfolding)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#再加一个-Add-another-one"><span class="nav-number">7.</span> <span class="nav-text">再加一个(Add another one.)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结论"><span class="nav-number">8.</span> <span class="nav-text">结论</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Charli</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Pisces</a> v6.4.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.4.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'bQj0duOu4duPTzRWh3nmNqNG-gzGzoHsz',
+        appKey: '8RVBaAkuHUkExbSP4g6iSYcf',
+        placeholder: '聊五毛钱的天呗',
+        avatar:'mm',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: false
+    });
+  </script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script>
+    
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
+        .done(function ({ results }) {
+          if (results.length > 0) {
+            var counter = results[0];
+            
+            Counter('put', `/classes/Counter/${counter.objectId}`, JSON.stringify({ time: { "__op":"Increment", "amount":1 } }))
+            
+            .done(function () {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(counter.time + 1);
+            })
+            
+            .fail(function ({ responseJSON }) {
+                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
+            })
+          } else {
+            
+              var $element = $(document.getElementById(url));
+              $element.find('.leancloud-visitors-count').text('Counter not initialized! See more at console err msg.');
+              console.error('ATTENTION! LeanCloud counter has security bug, see here how to solve it: https://github.com/theme-next/hexo-leancloud-counter-security. \n But you also can use LeanCloud without security, by set \'security\' option to \'false\'.');
+            
+          }
+        })
+      .fail(function ({ responseJSON }) {
+        console.log('LeanCloud Counter Error:' + responseJSON.code + " " + responseJSON.error);
+      });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + "bQj0duOu4duPTzRWh3nmNqNG-gzGzoHsz")
+        .done(function ({ api_server }) {
+          var Counter = function (method, url, data) {
+            return $.ajax({
+              method: method,
+              url: `https://${api_server}/1.1${url}`,
+              headers: {
+                'X-LC-Id': "bQj0duOu4duPTzRWh3nmNqNG-gzGzoHsz",
+                'X-LC-Key': "8RVBaAkuHUkExbSP4g6iSYcf",
+                'Content-Type': 'application/json',
+              },
+              data: data,
+            });
+          };
+          
+          addCount(Counter);
+          
+        })
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("bQj0duOu4duPTzRWh3nmNqNG-gzGzoHsz", "8RVBaAkuHUkExbSP4g6iSYcf");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+</body>
+</html>
