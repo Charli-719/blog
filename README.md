@@ -1,5 +1,7 @@
 ### 网址：[lifuzhen.github.io](https://lifuzhen.github.io)
 
+[2021-04-16    alternate of undefined](https://lifuzhen.github.io/2021/04/16/alternate%20of%20undefined/)
+
 [2021-04-12    git学习指南](https://lifuzhen.github.io/2021/04/12/git%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97/)
 
 [2021-03-16    在React Hooks中使用生命周期方法](https://lifuzhen.github.io/2021/03/16/%E5%9C%A8React%20Hooks%E4%B8%AD%E4%BD%BF%E7%94%A8%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%96%B9%E6%B3%95/)
