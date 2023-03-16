@@ -1,0 +1,16 @@
+.DS_Store
+.gitignore
+Thumbs.db
+_config.yml
+*.json
+db.json
+*.log
+.deploy_git/
+.idea/
+node_modules/
+source/
+public/
+themes/
+scaffolds/
+.deploy*/
+.text
